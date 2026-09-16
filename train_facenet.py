@@ -1,4 +1,9 @@
 import os
+try:
+    import certifi
+    os.environ['SSL_CERT_FILE'] = certifi.where()
+except Exception:
+    pass
 import cv2
 import pickle
 import numpy as np
